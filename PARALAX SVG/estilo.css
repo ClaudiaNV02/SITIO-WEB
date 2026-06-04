@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+.fil0{
+    fill: rgb(250, 239, 250);
+    stroke: white;
+    stroke-width: 10;
+    animation: texto 6s ease-in-out 1 forwards;
+    stroke-width:200px ;
+}
+@keyframes texto{
+    0% {
+        stroke-dashoffset: 50;
+        fill: transparent;
+        stroke: transparent;
+    }
+    25% {
+        stroke-dashoffset: 50;
+        fill: transparent;
+        stroke: transparent;
+    }
+    50% {
+        fill: transparent;
+        stroke: white;
+    }
+    50% {
+        fill: transparent;
+        stroke: white;
+    }
+    100% {
+        fill: #fff;
+        stroke-dashoffset: 0;
+    }
+}   
+svg{
+    position: absolute;
+    z-index: 3;
+    top: -150px;
+    left: 70px;
+}
+
+
+.CONTENEDOR{
+    width: 800px;
+    height: 800px;
+    border: 1px solid white;
+    margin: 0 auto;
+    margin-top: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.paisaje{
+    width: 800px;
+    height: 800px;
+    animation: paisaje 20s 1 forwards;
+}
+@keyframes paisaje{
+    from{
+       scale: 99%;
+       filter: blur(2px);
+    }
+    to{
+        scale:120%;
+        filter: blur(0px);
+    }
+}
+.marco{
+    width: 1100px;
+    height: 1100px;
+    position: absolute;
+    top: -100px;
+    left: -150px;
+    z-index: 5;
+    pointer-events: none;
+    animation: m 10s 1 forwards;
+}
+@keyframes m{
+    from{
+       scale: 99%;
+       filter: blur(2px);
+    }
+    to{
+        scale:180%;
+        filter: blur(0px);
+    }
+}
