@@ -1,0 +1,391 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+
+}
+.contenedor{
+    width: 600px;
+    height: 900px;
+    border: 1px solid white;
+    margin: 0 auto; /*centra*/
+    position: relative;
+    overflow: hidden;
+
+}
+.franja1{
+    width: 800px;
+    height: 550px;
+    background-image: url("img/gym2.jpg");
+    background-size: cover;
+    background-position: -180px 590px;
+    position: absolute;
+    top: 100px;
+    clip-path: polygon(0 0, 100% 46%, 100% 100%, 0 55%);
+    z-index: 2;
+    animation: franja1 15s 1 forwards;
+}
+@keyframes franja1 {
+    from{
+        scale: 200%;
+        filter: blur(10px);
+    }
+    to{
+        scale:100%;
+        filter: blur(0px);
+    }
+}
+.franja{
+    width: 800px;
+    height: 550px;
+    background-size: cover;
+    background-color: rgba(253, 120, 226, 0.523);
+    position: absolute;
+    top: 100px;
+    clip-path: polygon(0 0, 100% 46%, 100% 100%, 0 55%);
+    z-index: 3;
+    animation: franja 15s 1 forwards;
+
+}
+@keyframes franja {
+    from{
+        scale: 200%;
+        filter: blur(10px);
+    }
+    to{
+        scale:100%;
+        filter: blur(0px);
+    }
+}
+.franja2{
+    width: 250px;
+    height: 400px;
+    background-color: rgb(235, 169, 253);
+    position: absolute;
+    top: 414px;
+    left: 40px;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+    z-index: 5;
+    animation: franja2 15s 1 forwards;
+}
+@keyframes franja2 {
+    from{
+        top:500px;
+        scale: 50%;
+        filter: grayscale(-100%)
+    }
+    to{
+        top: 414px;
+        scale: 100%;
+        filter: grayscale(0%)
+    }
+}
+.franja5{
+    width: 250px;
+    height: 410px;
+    background-color: rgba(61, 57, 57, 0.787);
+    position: absolute;
+    top: 410px;
+    left: 50px;
+    clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%);
+    z-index: 4;
+    animation: franja5 15s 1 forwards;
+}
+@keyframes franja5 {
+    from{
+        top:500px;
+        scale: 50%;
+        filter: grayscale(-100%)
+    }
+    to{
+        top: 410px;
+        scale: 100%;
+        filter: grayscale(0%)
+    }
+}
+.franja3{
+    width: 600px;
+    height: 700px;
+    background-color: rgba(4, 10, 84, 0.999);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75%);
+    z-index: 1;
+}
+.franja4{
+    width: 600px;
+    height: 700px;
+    background-color: rgb(5, 4, 54);
+    position: absolute;
+    top: 200px;
+    left: 0px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+
+}
+.modelo{
+    width: 400px;
+    position: absolute;
+    z-index: 3;
+    left: 5px;
+    animation: modelo 12s 1 forwards;
+}
+@keyframes modelo {
+            from{
+                top:300px;
+                scale: 50%;
+                filter: grayscale(100%)
+            }
+            to{
+                top: 55px;
+                scale: 100%;
+                filter: grayscale(0%)
+            }
+        }
+.texto1{
+    position: absolute;
+    top: 3px;
+    left: 70px;
+    font-size: 67px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    line-height: 1;
+    z-index: 10;
+    animation: cinematico 15s 1 forwards;
+}
+.texto2{
+    position: absolute;
+    top: 89px;
+    left: 250px;
+    font-size: 75px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(242, 246, 247);
+    line-height: 1;
+    z-index: 10;
+    animation: cinematico 15s 1 forwards;
+    
+}
+@keyframes cinematico{
+
+    from{
+        letter-spacing:-100px;
+        opacity:0;
+        filter:blur(20px);
+    }
+
+    to{
+        letter-spacing:5px;
+        opacity:1;
+        filter:blur(0);
+    }
+
+}
+.texto3{
+    position: absolute;
+    top: 490px;
+    left: 50px;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(2, 20, 83);
+    line-height: 1;
+    z-index: 10;
+    animation: grande 20s 1 forwards;
+    
+}
+.texto4{
+    position: absolute;
+    top: 514px;
+    left: 70px;
+    font-size: 35px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(12, 4, 67);
+    line-height: 1;
+    z-index: 10;
+    animation: grande 20s 1 forwards;
+    
+}
+@keyframes grande{
+
+    from{
+        transform:
+        translateZ(-2000px)
+        scale(0)
+        rotateX(40deg);
+
+        opacity:0;
+        filter:blur(30px);
+    }
+
+    to{
+        transform:
+        translateZ(0)
+        scale(1)
+        rotateX(0deg);
+
+        opacity:1;
+        filter:blur(0);
+    }
+
+}
+.texto5,.texto6,.texto7,.texto8,.texto9,.texto10,
+.texto11,.texto12{
+    position: absolute;
+    left: 70px;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(242, 246, 247);
+    line-height: 1;
+    z-index: 10;
+    animation: texto 15s 1 forwards;
+}
+@keyframes texto{
+    from{
+        scale: 200%;
+        filter: blur(100px);
+    }
+    to{
+        scale:100%;
+        filter: blur(0px);
+    }
+}
+.texto5{
+    top:560px;
+}
+.texto6{
+    top:575px;
+}
+.texto7{
+    top: 590px;
+}
+.texto8{
+    top: 605px;
+}
+.texto9{
+    top: 620px;
+}
+.texto10{
+    top: 635px;
+}
+.texto11{
+    top: 650px;
+}
+.texto12{
+    top: 665px;
+}
+
+.texto14{
+    position: absolute;
+    left: 60px;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(37, 39, 39);
+    line-height: 1;
+    z-index: 10;
+    top: 720px;
+    animation: texto2 20s 1 forwards;
+}
+@keyframes texto2{
+    from{
+        scale: 200%;
+        filter: blur(100px);
+    }
+    to{
+        scale:100%;
+        filter: blur(0px);
+    }
+}
+.texto15{
+    position: absolute;
+    left: 60px;
+    font-size: 11.5px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(184, 219, 219);
+    line-height: 1;
+    z-index: 10;
+    top: 850px;
+}
+.texto16{
+    position: absolute;
+    left: 390px;
+    font-size: 10.5px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(78, 223, 223);
+    line-height: 1;
+    z-index: 10;
+    top: 620px;
+}
+.texto17{
+    position: absolute;
+    left: 390px;
+    font-size: 10.5px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(78, 223, 223);
+    line-height: 1;
+    z-index: 10;
+    top: 810px;
+}
+.texto18{
+    position: absolute;
+    left: 390px;
+    font-size: 10.5px;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(78, 223, 223);
+    line-height: 1;
+    z-index: 10;
+    top: 710px;
+}
+.franja1{
+    width: 800px;
+    height: 550px;
+    background-image: url("img/gym2.jpg");
+    background-size: cover;
+    background-position: -180px 590px;
+    position: absolute;
+    top: 100px;
+    z-index: 2;
+
+}
+.cuadrito{
+    width: 70px;
+    height: 40px;
+    background-image: url("img/ubicacion.png");
+    background-size: cover;
+    object-fit: contain;
+    position: absolute;
+    z-index: 5;
+    top: 600px;
+    left: 310px;
+}
+.cuadrito2{
+    width: 40px;
+    height: 40px;
+    background-image: url("img/ig.png");
+    background-size: contain;
+    position: absolute;
+    z-index: 5;
+    top: 700px;
+    left: 320px;
+}
+.cuadrito3{
+    width: 40px;
+    height: 40px;
+    background-image: url("img/face.png");
+    background-size: contain;
+    position: absolute;
+    z-index: 5;
+    top: 800px;
+    left: 320px;
+}
