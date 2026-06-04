@@ -1,0 +1,91 @@
+/* Reinicio básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b0b0b;
+}
+
+/* NAVBAR */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite acomodarse en pantallas pequeñas */
+    padding: 15px 30px;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Evita que se salga */
+    gap: 20px;
+}
+
+.nav a {
+    color: rgb(90, 4, 99);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* CONTENEDOR DE LA IMAGEN */
+.contenedor{
+    position: relative;
+}
+
+.contenedor::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("img/img.png");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: -1;
+}
+.fil0{
+    fill:transparent;
+    stroke:black;
+    stroke-width:100;
+    stroke-dasharray:50000;
+    stroke-dashoffset:50000;
+    fill-rule:nonzero;
+    animation:textAnimation 5s 1 forwards 2s;
+    
+}
+
+@keyframes textAnimation{
+    0%{
+        stroke-dashoffset:50000;
+        fill:transparent;
+    }
+
+    80%{
+        fill:transparent;
+    }
+
+    100%{
+        fill:white;
+        stroke:rgb(249, 242, 242);
+        stroke-width:100;
+        stroke-dashoffset:0;
+    }
+}
+svg{
+    display: block;
+    margin: 0 auto;
+}
+button{
+    background-color: #9283e7;
+    color: rgb(10, 10, 10);
+    padding: 8px 8px;
+    font-size: 12px;
+}
+button:hover{
+    background-color: violet ;
+    border-radius: 10px;
+    transform: scale(1.2);
+}
